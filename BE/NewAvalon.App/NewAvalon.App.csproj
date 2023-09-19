@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>d872761c-e400-4bca-a8a7-f731fab956f5</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.104.27" />
+    <PackageReference Include="FluentValidation" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.2.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.2.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.6.2" />
+    <PackageReference Include="Scrutor" Version="3.3.0" />
+    <PackageReference Include="SendGrid" Version="9.28.1" />
+    <PackageReference Include="SendGrid.Extensions.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Common\NewAvalon.Abstractions\NewAvalon.Abstractions.csproj" />
+    <ProjectReference Include="..\src\Common\NewAvalon.Boundary\NewAvalon.Boundary.csproj" />
+    <ProjectReference Include="..\src\Common\NewAvalon.Infrastructure\NewAvalon.Infrastructure.csproj" />
+    <ProjectReference Include="..\src\Common\NewAvalon.Persistence\NewAvalon.Persistence.csproj" />
+    <ProjectReference Include="..\src\Modules\Catalog\NewAvalon.Catalog.Business\NewAvalon.Catalog.Business.csproj" />
+    <ProjectReference Include="..\src\Modules\Catalog\NewAvalon.Catalog.Domain\NewAvalon.Catalog.Domain.csproj" />
+    <ProjectReference Include="..\src\Modules\Catalog\NewAvalon.Catalog.Persistence\NewAvalon.Catalog.Persistence.csproj" />
+    <ProjectReference Include="..\src\Modules\Catalog\NewAvalon.Catalog.Presentation\NewAvalon.Catalog.Presentation.csproj" />
+    <ProjectReference Include="..\src\Modules\Notification\NewAvalon.Notification.Boundary\NewAvalon.Notification.Boundary.csproj" />
+    <ProjectReference Include="..\src\Modules\Notification\NewAvalon.Notification.Business\NewAvalon.Notification.Business.csproj" />
+    <ProjectReference Include="..\src\Modules\Notification\NewAvalon.Notification.Domain\NewAvalon.Notification.Domain.csproj" />
+    <ProjectReference Include="..\src\Modules\Notification\NewAvalon.Notification.Infrastructure\NewAvalon.Notification.Infrastructure.csproj" />
+    <ProjectReference Include="..\src\Modules\Notification\NewAvalon.Notification.Persistence\NewAvalon.Notification.Persistence.csproj" />
+    <ProjectReference Include="..\src\Modules\Notification\NewAvalon.Notification.Presentation\NewAvalon.Notification.Presentation.csproj" />
+    <ProjectReference Include="..\src\Modules\Order\NewAvalon.Order.Boundary\NewAvalon.Order.Boundary.csproj" />
+    <ProjectReference Include="..\src\Modules\Order\NewAvalon.Order.Business\NewAvalon.Order.Business.csproj" />
+    <ProjectReference Include="..\src\Modules\Order\NewAvalon.Order.Domain\NewAvalon.Order.Domain.csproj" />
+    <ProjectReference Include="..\src\Modules\Order\NewAvalon.Order.Persistence\NewAvalon.Order.Persistence.csproj" />
+    <ProjectReference Include="..\src\Modules\Order\NewAvalon.Order.Presentation\NewAvalon.Order.Presentation.csproj" />
+    <ProjectReference Include="..\src\Modules\Storage\NewAvalon.Storage.Business\NewAvalon.Storage.Business.csproj" />
+    <ProjectReference Include="..\src\Modules\Storage\NewAvalon.Storage.Domain\NewAvalon.Storage.Domain.csproj" />
+    <ProjectReference Include="..\src\Modules\Storage\NewAvalon.Storage.Infrastructure\NewAvalon.Storage.Infrastructure.csproj" />
+    <ProjectReference Include="..\src\Modules\Storage\NewAvalon.Storage.Persistence\NewAvalon.Storage.Persistence.csproj" />
+    <ProjectReference Include="..\src\Modules\Storage\NewAvalon.Storage.Presentation\NewAvalon.Storage.Presentation.csproj" />
+    <ProjectReference Include="..\src\Modules\UserAdministration\NewAvalon.UserAdministration.Boundary\NewAvalon.UserAdministration.Boundary.csproj" />
+    <ProjectReference Include="..\src\Modules\UserAdministration\NewAvalon.UserAdministration.Business\NewAvalon.UserAdministration.Business.csproj" />
+    <ProjectReference Include="..\src\Modules\UserAdministration\NewAvalon.UserAdministration.Domain\NewAvalon.UserAdministration.Domain.csproj" />
+    <ProjectReference Include="..\src\Modules\UserAdministration\NewAvalon.UserAdministration.Infrastructure\NewAvalon.UserAdministration.Infrastructure.csproj" />
+    <ProjectReference Include="..\src\Modules\UserAdministration\NewAvalon.UserAdministration.Persistence\NewAvalon.UserAdministration.Persistence.csproj" />
+    <ProjectReference Include="..\src\Modules\UserAdministration\NewAvalon.UserAdministration.Presentation\NewAvalon.UserAdministration.Presentation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="authentication.settings.Debug.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="authentication.settings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="authentication.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

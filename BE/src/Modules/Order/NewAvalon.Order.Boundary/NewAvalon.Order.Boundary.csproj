@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\NewAvalon.Abstractions\NewAvalon.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Common\NewAvalon.Boundary\NewAvalon.Boundary.csproj" />
+  </ItemGroup>
+
+</Project>

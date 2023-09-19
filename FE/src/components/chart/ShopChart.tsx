@@ -1,0 +1,63 @@
+import * as React from "react";
+
+import { BarPlot } from "@mui/x-charts/BarChart";
+import { ChartContainer } from "@mui/x-charts/ChartContainer";
+import { ChartsXAxis } from "@mui/x-charts/ChartsXAxis";
+import { ChartsYAxis } from "@mui/x-charts/ChartsYAxis";
+import { LinePlot } from "@mui/x-charts/LineChart";
+import { AllSeriesType } from "@mui/x-charts/models";
+
+const series = [
+  {
+    type: "bar",
+    stack: "",
+    yAxisKey: "eco",
+    data: [2, 5, 3, 4, 1],
+  },
+  {
+    type: "bar",
+    stack: "",
+    yAxisKey: "eco",
+    data: [5, 6, 2, 8, 9],
+  },
+  {
+    type: "line",
+    yAxisKey: "users",
+    color: "red",
+    data: [1000, 1500, 3000, 5000, 10000],
+  },
+] as AllSeriesType[];
+
+export default function ShopChart() {
+  return (
+    <ChartContainer
+      series={series}
+      width={650}
+      height={350}
+      xAxis={[
+        {
+          id: "years",
+          data: [2010, 2011, 2012, 2013, 2014],
+          scaleType: "band",
+          valueFormatter: (value: string) => value.toString(),
+        },
+      ]}
+      yAxis={[
+        {
+          id: "eco",
+          scaleType: "linear",
+        },
+        {
+          id: "users",
+          scaleType: "log",
+        },
+      ]}
+    >
+      <BarPlot />
+      <LinePlot />
+      <ChartsXAxis label="Years" position="bottom" axisId="years" />
+      <ChartsYAxis label="Results" position="left" axisId="eco" />
+      <ChartsYAxis label="Users" position="right" axisId="users" />
+    </ChartContainer>
+  );
+}

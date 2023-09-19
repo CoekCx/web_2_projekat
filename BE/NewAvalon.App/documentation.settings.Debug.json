@@ -1,0 +1,16 @@
+{
+  "Ui": {
+    "RoutePrefix": "",
+    "DocumentTitle": "New Avalon API",
+    "ConfigObject": {
+      "Urls": [
+        {
+          "Url": "/swagger/v1/swagger.json",
+          "Name": "v1"
+        }
+      ],
+      "DocExpansion": "None"
+    }
+  }
+}
+

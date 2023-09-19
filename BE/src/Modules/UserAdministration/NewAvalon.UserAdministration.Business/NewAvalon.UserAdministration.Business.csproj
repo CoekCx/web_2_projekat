@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Keccak256" Version="1.0.0" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="MassTransit" Version="7.2.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\NewAvalon.Messaging.Contracts\NewAvalon.Messaging.Contracts.csproj" />
+    <ProjectReference Include="..\NewAvalon.UserAdministration.Boundary\NewAvalon.UserAdministration.Boundary.csproj" />
+    <ProjectReference Include="..\NewAvalon.UserAdministration.Domain\NewAvalon.UserAdministration.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

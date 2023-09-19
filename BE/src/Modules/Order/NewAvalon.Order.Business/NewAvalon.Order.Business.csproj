@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="7.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\NewAvalon.Abstractions\NewAvalon.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Common\NewAvalon.Authorization\NewAvalon.Authorization.csproj" />
+    <ProjectReference Include="..\..\..\Common\NewAvalon.Messaging.Contracts\NewAvalon.Messaging.Contracts.csproj" />
+    <ProjectReference Include="..\NewAvalon.Order.Boundary\NewAvalon.Order.Boundary.csproj" />
+    <ProjectReference Include="..\NewAvalon.Order.Domain\NewAvalon.Order.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
